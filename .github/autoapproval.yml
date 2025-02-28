@@ -1,0 +1,6 @@
+from_owner: []
+required_labels:
+  - backmerge
+apply_labels:
+  - auto-approve
+blacklisted_labels: []
