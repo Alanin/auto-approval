@@ -14,6 +14,9 @@ jobs:
   autoapproval:
     runs-on: ubuntu-latest
     name: Autoapproval
+    if: |
+      (github.event.pull_request.head.ref == 'main' && github.event.pull_request.base.ref == 'qs') ||
+      (github.event.pull_request.head.ref == 'qs' && github.event.pull_request.base.ref == 'dev')
     steps:
       - uses: dkhmelenko/autoapproval@v1.0
         env:
